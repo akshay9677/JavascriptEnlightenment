@@ -1,0 +1,40 @@
+<!DOCTYPE html><body>
+    <script>
+    //Here JS is used in HTMl to emphasize on window head object,
+    //using it as an example
+       //Chapter 5 Head / Global Objects
+   //1..Head Object
+     var name = 'Akshay'
+       var func1 = function(n){
+           var func2 = function(){
+               console.log(name);// Akshay
+           }();
+       }
+
+       func1(name);
+    //2..No Global Object
+    var func3 = function(){
+        var s = 'Akshay';
+    }
+
+    // func1(s);// undefined
+    //3..Refering to head object
+      //When Java Script is run in a browser the entire code is wrapped in a window object,
+      //thus whatever JS code we write it is wrapped in an object called window
+     var str = 'Akshay Kannan';
+      v = this;//refers the head object - window
+     console.log(v.str);//Akshay Kannan
+    //4..Head Objects are implied 
+     var func4 = function(){ 
+         alert('Welcome');
+         window.alert('Welcome using window');
+         return ;
+     };
+     func4();
+    </script>
+</body>
+</html>
+
+
+ 
+   
