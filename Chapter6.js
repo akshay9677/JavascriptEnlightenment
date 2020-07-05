@@ -44,6 +44,7 @@
      var akshay = {};
      obbj.fun.call(akshay,'Akshay Kannan');//Akshay Kannan
       //Here call is use to invoke a method by passing akshay object as a argument
+      console.log(akshay.name);
       //(5)By using apply()
       obbj.fun.apply(akshay,['Akshay Kannan']);//Akshay Kannan
       //apply is same as call only difference is the way in which arguments are passed
