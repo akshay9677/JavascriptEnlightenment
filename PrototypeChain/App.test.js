@@ -17,6 +17,9 @@ describe('Test Cases for No of Prototypes in Prototype Chain,Call, Bind and Appl
         var obj = {name: 'Akshay'};
         expect(functions.BindAndApplyMethod(obj,'Kannan')).toBe('Akshay Kannan Akshay Kannan')
     })
-    
+    test('Test cases for object define property modifiers enumerable,configurable and writable',()=>{
+        var obj = {}
+        expect(functions.ObjectDefineModifiers(obj)).toStrictEqual([false,22,[]]);
+    })
 
 });

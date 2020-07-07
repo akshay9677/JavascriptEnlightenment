@@ -25,6 +25,16 @@ BindAndApplyMethod: function(obj,lName){
     var akshay = person.printName.bind(obj,lName);
     return akshay()+' '+person.printName.call(obj,[lName]);
  },
+ ObjectDefineModifiers: function(obj){
+    Object.defineProperty(obj,'props',{
+       value: 22,
+       enumerable: false,
+       writable: false,
+       configurable: false
+    })
+    obj.props = 42;
+    return [delete obj.props,obj.props,Object.keys(obj)]
+ }
 
 
 }
