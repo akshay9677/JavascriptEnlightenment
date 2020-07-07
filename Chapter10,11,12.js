@@ -36,3 +36,9 @@
   if(b4){
       console.log('Non-primitive boolean are converted to true');
   }
+
+//Primitive literals are converted to objects when props are accesed
+var str = 'Akshay';
+console.log(str.length);//an invisible wrapper object will be formed 
+
+
