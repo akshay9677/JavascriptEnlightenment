@@ -22,8 +22,12 @@ const functions = {
     },
     EndOfPrototypeChain: function(arr){
         return arr.__proto__.__proto__.__proto__;
-    }
+    },
+    
+
 }
+
+
 
 
 
