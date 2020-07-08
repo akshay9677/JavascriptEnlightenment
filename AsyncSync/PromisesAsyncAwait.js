@@ -11,7 +11,7 @@ function pushInArray(x){
     let p = new Promise((resolve,reject)=>{
         setTimeout(()=>{
             arr.push(x);
-         if(arr[arr.length - 1] == x){
+         if(arr[arr.length - 1] != x){
              resolve();
          }else{
              reject('failed');
@@ -28,6 +28,16 @@ console.log('Hi')
 async function arrayInsert(c){
      await pushInArray(c);
     logArray()
+}
+
+async function arrayInsert(c){
+    try{
+        await pushInArray(c);
+        logArray()
+    }catch(e){
+        console.log(e);
+    }
+    
 }
 
 arrayInsert(4);
