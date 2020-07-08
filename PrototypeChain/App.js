@@ -34,9 +34,23 @@ BindAndApplyMethod: function(obj,lName){
     })
     obj.props = 42;
     return [delete obj.props,obj.props,Object.keys(obj)]
+ },
+ SetTimeout: function(x){
+   var promise = new Promise(function(resolve, reject) {
+      setTimeout(function() {
+        resolve(x);
+      });
+    });
+    return promise;
+    
  }
 
-
 }
+
+async function aa() {
+   const result = await functions.SetTimeout('Akshay');
+   console.log(result); // --> 'done!';
+ }
+ aa();
 
 module.exports = functions;
